@@ -1,4 +1,4 @@
-package exercise.chapter_25;
+package exercise.chapter_26;
 
 public class Subject {
 
