@@ -1,21 +1,21 @@
-package exercise.chapter_26;
+package exercise.chapter_27;
 
 public class Teacher {
 
     // 학교 정보
-    String schoolName;
+    private String schoolName;
 
     // 과목
-    Subject subject;
+    private Subject subject;
 
     // 기본 정보
-    String name;
-    String gender;
+    private String name;
+    private String gender;
 
     // 행위
     void teach(Student student, String subjectName) {
         // TODO : 나중에 구현
-        String studentName = student.name;
+        String studentName = student.getName();
         System.out.printf("선생님 : 저는 %s 에게 %s 과목을 가르치고 있습니다.\n", studentName, subjectName);
     }
 
@@ -28,7 +28,12 @@ public class Teacher {
         gender = pGender;
 
         Subject newSubject = new Subject();
-        newSubject.subjectName = pSubjectName;
-        newSubject.subjectCode = pSubjectCode;
+        newSubject.setSubjectName(pSubjectName);
+        newSubject.setSubjectCode(pSubjectCode);
+    }
+
+    // getter
+    public String getName() {
+        return name;
     }
 }
