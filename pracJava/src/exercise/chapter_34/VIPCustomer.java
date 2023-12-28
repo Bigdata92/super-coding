@@ -1,18 +1,13 @@
 package exercise.chapter_34;
 
-public class VIPCustomer {
+public class VIPCustomer extends Customer{
 
-    static int serialNums = 1;
+    static int serialNums = 1;  // 부모 클래스 변수 !+ 자식 클래스 변수
 
-    private String customerID;
-    private String name;
-    private String customerGrade;
-
-    private int bonusPoint;
-    private double bonusPointRatio;
     private String agentID;
     private double discountRatio;
 
+    @Override
     public int calculatePrice(int price) {
         this.bonusPoint += price * bonusPointRatio;
         price -= price * discountRatio;
@@ -24,7 +19,8 @@ public class VIPCustomer {
     }
 
     public VIPCustomer(String name) {
-        this.customerID = "VIP" + serialNums++;
+        super();    // 부모 생성자 실행 후, 자식 생성자 실행
+        super.customerID = "VIP" + serialNums++;
         this.name = name;
         this.customerGrade = "VIP";
         this.bonusPointRatio = 0.05;
@@ -49,7 +45,8 @@ public class VIPCustomer {
                 '}';
     }
 
-    public void myInfo() {
+    @Override
+    public void printMyInfo() {
         System.out.println("VIPCustomer: " + toString());
     }
 }

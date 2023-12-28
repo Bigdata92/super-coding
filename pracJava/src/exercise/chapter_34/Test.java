@@ -7,8 +7,8 @@ public class Test {
         VIPCustomer vipCustomer = new VIPCustomer("나관중");
         Customer customer2 = new Customer("나영희");
 
-        customer.myInfo();
-        vipCustomer.myInfo();
-        customer2.myInfo();
+        customer.printMyInfo();
+        vipCustomer.printMyInfo();
+        customer2.printMyInfo();
     }
 }

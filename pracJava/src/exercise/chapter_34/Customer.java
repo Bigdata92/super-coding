@@ -4,16 +4,19 @@ public class Customer {
 
     static int serialNums = 1;
 
-    private String customerID;
-    private String name;
-    private String customerGrade;
+    protected String customerID;
+    protected String name;
+    protected String customerGrade;
 
-    private int bonusPoint;
-    private double bonusPointRatio;
+    protected int bonusPoint;
+    protected double bonusPointRatio;
 
     public int calculatePrice(int price) {
         this.bonusPoint += price * bonusPointRatio;
         return price;
+    }
+
+    public Customer() {
     }
 
     public Customer(String name) {
@@ -35,7 +38,7 @@ public class Customer {
                 '}';
     }
 
-    public void myInfo() {
+    public void printMyInfo() {
         System.out.println("Customer: " + toString());
     }
 }

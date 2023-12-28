@@ -7,9 +7,9 @@ public class Staff {
     public int helpPayment(Customer customer, int price) {
         return customer.calculatePrice(price);
     }
-    public int helpPayment(VIPCustomer vipCustomer, int price) {
-        return vipCustomer.calculatePrice(price);
-    }
+//    public int helpPayment(VIPCustomer vipCustomer, int price) {
+//        return vipCustomer.calculatePrice(price);
+//    }
 
     public void addSalesAmount(int cash) {
         salesAmount += cash;
