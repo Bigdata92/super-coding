@@ -12,7 +12,7 @@ public class InterfaceTest2 {
 
         if (drone instanceof Drone) {
             Drone drone2 = (Drone) drone;
-            drone2.takePicture();q
+            drone2.takePicture();
         }
     }
 }
