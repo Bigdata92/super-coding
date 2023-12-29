@@ -2,7 +2,7 @@ package exercise.chapter_42;
 
 public class GarbageCollectorTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Customer[] customers = new Customer[100];
 
