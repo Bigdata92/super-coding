@@ -1,6 +1,7 @@
 package exercise.chapter_52;
 
-import exercise.chapter_51.exceptions.IDFormatException;
+import exercise.chapter_52.exceptions.IDFormatException;
+import exercise.chapter_52.exceptions.PositiveNumberException;
 
 import java.time.LocalDateTime;
 
